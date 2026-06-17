@@ -1,0 +1,5 @@
+Aparência,Temperatura,Umidade,Vento,Jogar
+Sol,Quente,Alta,Fraco,Nao
+Sol,Quente,Alta,Forte,Nao
+Nublado,Quente,Alta,Fraco,Sim
+Chuva,Amena,Normal,Fraco,Sim
