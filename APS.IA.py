@@ -1,3 +1,11 @@
+"""
+Breno Olegário Seixas
+Matrícula: 2023101356
+
+obs: Eu ia fazer com TS mais, eu acabei tendo dificuldade por que eu ainda não sou tão em TS.
+obs2: Pra rodar, é só trocar a planilha no caminho Excel que está no fim do codigo.
+"""
+
 import math
 import pandas as pd
 import json
@@ -62,7 +70,10 @@ def id3(df, atrib, alvo):
     return arvore
 
 def id3_excel(caminho_arquivo, alvo):
-    df = pd.read_excel(caminho_arquivo)
+    try:
+        df = pd.read_excel(caminho_arquivo)
+    except Exception:
+        df = pd.read_csv(caminho_arquivo, encoding='utf-8')
     
     if df.empty:
         print("Arquivo vazio!")
@@ -76,7 +87,7 @@ def id3_excel(caminho_arquivo, alvo):
     
     arvore_gerada = id3(df, atrib, alvo)
     
-    print("Árvore de Decisão Resultante:")
+    print("Árvore de Decisão:")
     print(json.dumps(arvore_gerada, indent=2, ensure_ascii=False))
 
 
